@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+:root {
+  /* ### Primary */
+  /* (CTA text) */
+  --Light-red: hsl(356, 100%, 66%);
+  /* (CTA hover background) */
+  --Very-lightred: hsl(355, 100%, 74%);
+  /* (headings) */
+  --Very-dark-blue: hsl(208, 49%, 24%);
+
+  /* ### Neutral */
+
+  --White: hsl(0, 0%, 100%);
+  /* (footer text) */
+  --Grayish-blue: hsl(240, 2%, 79%);
+  /* (body copy) */
+  --Very-dark-grayish-blue: hsl(207, 13%, 34%);
+  /* (footer background) */
+  --Very-darkblack-blue: hsl(240, 10%, 16%);
+
+  /* ### Gradient */
+  /* Background gradient - Intro/CTA mobile nav: */
+
+  --Very-light-red: hsl(13, 100%, 72%);
+  --Lightred: hsl(353, 100%, 62%);
+
+  /* Background gradient - body: */
+
+  --Very-dark-grayblue: hsl(237, 17%, 21%);
+  --Very-dark-desaturated-blue: hsl(237, 23%, 32%);
+}
+
+@layer base {
+  .intro-cta {
+    @apply bg-gradient-to-r from-[var(--Very-light-red)] to-[var(--Lightred)];
+  }
+
+  .body-gradient {
+    @apply bg-gradient-to-br from-[var(--Very-dark-desaturated-blue)] to-[var(--Very-dark-grayblue)];
+  }
+}
